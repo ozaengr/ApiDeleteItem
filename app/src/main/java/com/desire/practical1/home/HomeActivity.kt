@@ -59,7 +59,8 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@HomeActivity, "Failed", Toast.LENGTH_SHORT).show()
+
             }
         })
     }
