@@ -16,11 +16,11 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.desire.practical1.home.HomeActivity
 import com.desire.practical1.databinding.FragmentLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,6 +57,7 @@ class LoginFragment : Fragment() {
         }
     }
 
+
     private fun isValidPass(pass: String): Boolean {
         var passwordPattern =
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\S+\$).{4,}\$"
@@ -92,9 +93,9 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-        spannableString.setSpan(clickableSpan,23,29,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableString.setSpan(clickableSpan, 23, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         binding.tvSignup.text = spannableString
-        binding.tvSignup.setText(spannableString,TextView.BufferType.SPANNABLE)
+        binding.tvSignup.setText(spannableString, TextView.BufferType.SPANNABLE)
         binding.tvSignup.movementMethod = LinkMovementMethod.getInstance()
     }
 }
