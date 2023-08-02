@@ -18,4 +18,11 @@
     <string name="name">Name</string>
     <string name="description">Description</string>
     <string name="delete">Delete</string>
+    <string name="title">TITLE :   </string>
+    <string name="enter_your_name_here">Enter your name here</string>
+    <string name="entert_discription_here">Entert Discription here</string>
+    <string name="category">Category :   </string>
+    <string name="enter_category_here">Enter Category here</string>
+    <string name="add_product">Add Product</string>
+    <string name="all_product_list">All Product List</string>
 </resources>
