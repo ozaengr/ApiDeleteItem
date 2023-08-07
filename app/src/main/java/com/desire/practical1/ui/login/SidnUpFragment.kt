@@ -1,4 +1,4 @@
-package com.desire.practical1.ui
+package com.desire.practical1.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

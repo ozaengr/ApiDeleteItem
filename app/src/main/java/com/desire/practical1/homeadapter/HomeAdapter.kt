@@ -1,16 +1,15 @@
-package com.desire.practical1.home
+package com.desire.practical1.homeadapter
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.desire.practical1.api.User
 import com.desire.practical1.databinding.RcvItemBinding
 
-class HomeAdapter(var listOfData: ArrayList<User>) :
+class HomeAdapter(
+    var listOfData: ArrayList<User>
+) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     fun deleteItem(id : Int){
@@ -18,14 +17,18 @@ class HomeAdapter(var listOfData: ArrayList<User>) :
         notifyDataSetChanged()
     }
     var onItemClick: ((User) -> Unit)? = null
+    var onClickItem: ((User) -> Unit)? = null
 
     inner class HomeViewHolder(var view: RcvItemBinding) : RecyclerView.ViewHolder(view.root) {
-        fun bind(user: User, position: Int) {
+        fun bind(user: User, position: Int,onClickItem: ((User) -> Unit)?) {
             view.tvName.text = user.title
             view.tvDescription.text = user.category
             Glide.with(view.imageProduct).load(user.image).into(view.imageProduct)
             view.btnDelete.setOnClickListener {
                 onItemClick?.invoke(listOfData.get(position))
+            }
+            view.root.setOnClickListener {
+                onClickItem?.invoke(user)
             }
         }
     }
@@ -42,7 +45,7 @@ class HomeAdapter(var listOfData: ArrayList<User>) :
 
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        holder.bind(listOfData[position], position)
+        holder.bind(listOfData[position], position, onClickItem)
     }
 
 

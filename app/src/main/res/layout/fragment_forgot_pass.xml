@@ -6,7 +6,7 @@
     android:paddingStart="30dp"
     android:paddingEnd="30dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ForgotPassFragment">
+    tools:context=".ui.login.ForgotPassFragment">
 
     <TextView
         android:id="@+id/tv_forgot_password1"

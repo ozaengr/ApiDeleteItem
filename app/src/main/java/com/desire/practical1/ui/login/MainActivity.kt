@@ -1,4 +1,4 @@
-package com.desire.practical1
+package com.desire.practical1.ui.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

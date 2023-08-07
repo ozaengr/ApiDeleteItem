@@ -1,4 +1,4 @@
-package com.desire.practical1.ui
+package com.desire.practical1.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,9 +14,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.desire.practical1.home.HomeActivity
+import com.desire.practical1.ui.home.HomeActivity
 import com.desire.practical1.databinding.FragmentLoginBinding
-import com.google.firebase.auth.FirebaseAuth
+import com.desire.practical1.ui.home.AllProductFragment
+import com.desire.practical1.ui.home.HomeFragment
 
 class LoginFragment : Fragment() {
 

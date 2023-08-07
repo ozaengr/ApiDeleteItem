@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.desire.practical1.ui.LoginFragment"
+        android:name="com.desire.practical1.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPassFragment"
-        android:name="com.desire.practical1.ui.ForgotPassFragment"
+        android:name="com.desire.practical1.ui.login.ForgotPassFragment"
         android:label="fragment_forgot_pass"
         tools:layout="@layout/fragment_forgot_pass" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.desire.practical1.ui.SignInFragment"
+        android:name="com.desire.practical1.ui.login.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/sidnUpFragment"
-        android:name="com.desire.practical1.ui.SidnUpFragment"
+        android:name="com.desire.practical1.ui.login.SidnUpFragment"
         android:label="fragment_sidn_up"
         tools:layout="@layout/fragment_sidn_up" />
 </navigation>
